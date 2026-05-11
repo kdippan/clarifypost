@@ -1,0 +1,59 @@
+---
+pagination:
+  data: collections.categories
+  size: 1
+  alias: categoryName
+permalink: "/category/{{ categoryName | slug }}/index.html"
+eleventyComputed:
+  title: "Category: {{ categoryName }}"
+  description: "Browse all articles and guides related to {{ categoryName }} on ClarifyPost."
+---
+{% extends "base.njk" %}
+
+{% block extraCss %}
+<link rel="stylesheet" href="/assets/css/ads.css">
+{% endblock %}
+
+{% block content %}
+<div class="container" style="padding: var(--space-xl) 0; min-height: 70vh;">
+  <header style="text-align: center; margin-bottom: var(--space-xl);">
+    <p style="font-family: var(--font-ui); font-size: var(--text-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-accent); margin-bottom: var(--space-sm);">Category</p>
+    <h1 style="font-family: var(--font-display); font-size: var(--text-4xl); color: var(--color-text-primary); margin-bottom: var(--space-sm);">
+      {{ categoryName }}
+    </h1>
+    
+    {% set categoryCount = 0 %}
+    {% for post in collections.posts %}
+      {% if post.data.category == categoryName %}
+        {% set categoryCount = categoryCount + 1 %}
+      {% endif %}
+    {% endfor %}
+    
+    <p style="font-family: var(--font-ui); color: var(--color-text-secondary);">
+      Browsing {{ categoryCount }} article{% if categoryCount != 1 %}s{% endif %}
+    </p>
+  </header>
+
+  <div class="ad-container" style="margin-bottom: var(--space-xl);">
+    {% set type = "leaderboard" %}
+    {% include "ad-units.njk" %}
+  </div>
+
+  <div class="posts-grid">
+    {% for post in collections.posts %}
+      {% if post.data.category == categoryName %}
+      <a href="{{ post.url }}" class="post-card">
+        <span class="post-card-category">{{ post.data.category }}</span>
+        <h2 class="post-card-title">{{ post.data.title }}</h2>
+        <p class="post-card-excerpt" style="color: var(--color-text-secondary); font-size: var(--text-sm); line-height: 1.5; margin-bottom: auto;">{{ post.data.description | truncate(110) }}</p>
+        <div class="post-card-meta">
+          <time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
+          <span>·</span>
+          <span>{{ post.data.readingTime }}</span>
+        </div>
+      </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
