@@ -1,12 +1,14 @@
 ---
-layout: base.njk
 title: About ClarifyPost
 description: Learn more about ClarifyPost, our mission to provide clear answers instantly, and the person behind the guides.
+permalink: /about/index.html
 ---
+{% extends "base.njk" %}
 
-<div class="container">
+{% block content %}
+<div class="container" style="padding: var(--space-xl) 0; max-width: 800px;">
   <article class="article-body">
-    <header class="article-header">
+    <header class="article-header" style="text-align: center; margin-bottom: var(--space-xl);">
       <h1 class="article-title">About ClarifyPost</h1>
     </header>
 
@@ -18,12 +20,7 @@ description: Learn more about ClarifyPost, our mission to provide clear answers 
     <p>The modern web is often cluttered with slow-loading pages, intrusive pop-ups, and thousands of words of "filler" content designed for search engines rather than people. ClarifyPost is different. We put the answer in the very first paragraph, then provide the context and steps you need to finish your task.</p>
 
     <h2>Expertise & Author</h2>
-    <p>ClarifyPost is a single-author blog curated by Dippan Bhusal, a Class 12 student and full-stack developer based in India. With a deep focus on web utility tools and SEO optimization, I build every guide to be technically accurate, fast, and easy to read.</p>
-
-    <h2>How We Write</h2>
-    <p>Every article on this site is researched and written to ensure accuracy at the time of publishing. We prioritize official documentation, government portals, and reputable primary sources to provide information you can rely on.</p>
-
-    <h2>Contact Us</h2>
-    <p>Have a question or a suggestion for a future guide? You can reach out via email at <strong>dippanbhusal@gmail.com</strong> or find me on GitHub.</p>
+    <p>ClarifyPost is a single-author blog curated by Dippan Bhusal, a full-stack developer based in India. With a deep focus on web utility tools and SEO optimization, I build every guide to be technically accurate, fast, and easy to read.</p>
   </article>
 </div>
+{% endblock %}
