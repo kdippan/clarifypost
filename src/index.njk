@@ -1,9 +1,9 @@
 ---
-layout: base.njk
 title: Clear Answers. Instantly.
 description: Find how-to guides and plain-language explanations for everyday questions. No fluff, just answers.
 ogType: website
 ---
+{% extends "base.njk" %}
 
 {% block extraCss %}
 <link rel="stylesheet" href="/assets/css/ads.css">
@@ -92,13 +92,15 @@ ogType: website
       }
     };
 
-    searchBtn.addEventListener('click', executeHomeSearch);
-    searchInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        executeHomeSearch();
-      }
-    });
+    if(searchBtn && searchInput) {
+      searchBtn.addEventListener('click', executeHomeSearch);
+      searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          executeHomeSearch();
+        }
+      });
+    }
   });
 </script>
 {% endblock %}
