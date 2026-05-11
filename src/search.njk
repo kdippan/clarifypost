@@ -1,0 +1,107 @@
+---
+layout: base.njk
+title: Search Results
+description: Search for answers, how-to guides, and explanations across ClarifyPost.
+permalink: /search/index.html
+---
+
+<div class="container" style="padding: var(--space-xl) 0; min-height: 60vh;">
+  <header style="margin-bottom: var(--space-xl);">
+    <h1 style="font-family: var(--font-display); font-size: var(--text-3xl); margin-bottom: var(--space-sm);">Search Results</h1>
+    <p id="search-count" style="color: var(--color-text-secondary); font-family: var(--font-ui);">Loading search engine...</p>
+  </header>
+
+  <div style="max-width: 560px; margin-bottom: var(--space-xl); display: flex;">
+    <input type="search" id="search-page-input" placeholder="Search for anything..." aria-label="Search articles" style="flex: 1; height: 52px; padding: 0 var(--space-md); border: 1px solid var(--color-border); border-radius: var(--radius-md) 0 0 var(--radius-md); font-family: var(--font-ui); font-size: var(--text-base); outline: none;">
+    <button id="search-page-btn" aria-label="Submit search" style="background: var(--color-accent); color: var(--color-surface); border: none; padding: 0 var(--space-lg); border-radius: 0 var(--radius-md) var(--radius-md) 0; cursor: pointer;">
+      <i data-lucide="search"></i>
+    </button>
+  </div>
+
+  <div class="ad-container" style="margin-bottom: var(--space-xl);">
+    {% set type = "in-content" %}
+    {% include "ad-units.njk" %}
+  </div>
+
+  <div id="search-results-grid" class="posts-grid">
+  </div>
+</div>
+
+{% block extraJs %}
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', async () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    let query = urlParams.get('q') || '';
+    const searchInput = document.getElementById('search-page-input');
+    const searchBtn = document.getElementById('search-page-btn');
+    const resultsGrid = document.getElementById('search-results-grid');
+    const searchCount = document.getElementById('search-count');
+
+    if (query) {
+      searchInput.value = query;
+    }
+
+    try {
+      const response = await fetch('/search-index.json');
+      const searchIndex = await response.json();
+
+      const fuse = new Fuse(searchIndex, {
+        keys: ['title', 'description', 'category'],
+        threshold: 0.3,
+        ignoreLocation: true
+      });
+
+      const renderResults = (searchQuery) => {
+        if (!searchQuery) {
+          searchCount.innerText = "Please enter a search term.";
+          resultsGrid.innerHTML = '';
+          return;
+        }
+
+        const results = fuse.search(searchQuery);
+        searchCount.innerText = `${results.length} result${results.length !== 1 ? 's' : ''} found for "${searchQuery}"`;
+
+        if (results.length === 0) {
+          resultsGrid.innerHTML = `<p style="grid-column: 1 / -1; color: var(--color-text-secondary); font-family: var(--font-ui);">No results found. Try a different keyword or browse our homepage.</p>`;
+          return;
+        }
+
+        resultsGrid.innerHTML = results.map(result => {
+          const item = result.item;
+          return `
+            <a href="${item.url}" class="post-card">
+              <span class="post-card-category">${item.category || 'Article'}</span>
+              <h2 class="post-card-title">${item.title}</h2>
+              <p class="post-card-excerpt">${item.description}</p>
+            </a>
+          `;
+        }).join('');
+      };
+
+      if (query) {
+        renderResults(query);
+      } else {
+        searchCount.innerText = "Ready to search.";
+      }
+
+      const executeSearch = () => {
+        const newQuery = searchInput.value.trim();
+        if (newQuery) {
+          window.history.pushState({}, '', '?q=' + encodeURIComponent(newQuery));
+          renderResults(newQuery);
+        }
+      };
+
+      searchBtn.addEventListener('click', executeSearch);
+      searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') executeSearch();
+      });
+
+    } catch (error) {
+      searchCount.innerText = "Search is currently unavailable.";
+      console.error("Search error:", error);
+    }
+  });
+</script>
+{% endblock %}

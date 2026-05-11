@@ -1,0 +1,21 @@
+---
+layout: base.njk
+title: Page Not Found
+description: We couldn't find the page you are looking for.
+permalink: 404.html
+---
+
+<div class="container" style="text-align: center; padding: var(--space-2xl) 0; min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  <h1 style="font-family: var(--font-display); font-weight: 800; font-size: 120px; color: var(--color-accent); line-height: 1; margin-bottom: var(--space-md);">404</h1>
+  <h2 style="font-family: var(--font-display); font-size: var(--text-2xl); color: var(--color-text-primary); margin-bottom: var(--space-sm);">We couldn't find that page.</h2>
+  <p style="font-family: var(--font-body); color: var(--color-text-secondary); margin-bottom: var(--space-xl);">Try searching for what you need, or browse our latest articles.</p>
+
+  <div class="search-wrapper" style="width: 100%; max-width: 560px; display: flex; margin-bottom: var(--space-xl);">
+    <input type="search" id="site-search-404" class="search-input" placeholder="Search for anything..." aria-label="Search articles" style="flex: 1; height: 52px; padding: 0 var(--space-md); border: 1px solid var(--color-border); border-radius: var(--radius-md) 0 0 var(--radius-md); font-family: var(--font-ui); font-size: var(--text-base); outline: none;">
+    <button class="search-btn" aria-label="Submit search" style="background: var(--color-accent); color: var(--color-surface); border: none; padding: 0 var(--space-lg); border-radius: 0 var(--radius-md) var(--radius-md) 0; cursor: pointer;">
+      <i data-lucide="search"></i>
+    </button>
+  </div>
+
+  <a href="/" style="font-family: var(--font-ui); font-weight: 600; font-size: var(--text-base); color: var(--color-text-primary); text-decoration: none;">&larr; Back to Home</a>
+</div>
