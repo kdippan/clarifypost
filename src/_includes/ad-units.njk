@@ -1,0 +1,39 @@
+{% if type == "in-content" %}
+<div class="ad-container ad-unit-banner" aria-hidden="true">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="{{ site.adsenseClient }}"
+       data-ad-slot="INCONTENT_SLOT_ID"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+{% elif type == "sidebar" %}
+<div class="ad-container ad-unit-sidebar ad-sidebar-only" aria-hidden="true">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="{{ site.adsenseClient }}"
+       data-ad-slot="SIDEBAR_SLOT_ID"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+{% elif type == "leaderboard" %}
+<div class="ad-container ad-unit-banner" aria-hidden="true">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="{{ site.adsenseClient }}"
+       data-ad-slot="LEADERBOARD_SLOT_ID"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+{% endif %}

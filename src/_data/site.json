@@ -1,0 +1,10 @@
+{
+  "name": "ClarifyPost",
+  "tagline": "Clear Answers. Instantly.",
+  "url": "https://clarifypost.vercel.app/",
+  "author": "ClarifyPost",
+  "ga4Id": "G-XXXXXXXXXX",
+  "adsenseClient": "ca-pub-XXXXXXXXXXXXXXXX",
+  "postsPerPage": 12,
+  "defaultCategory": "General"
+}

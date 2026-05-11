@@ -1,0 +1,88 @@
+---
+layout: base.njk
+title: Clear Answers. Instantly.
+description: Find how-to guides and plain-language explanations for everyday questions. No fluff, just answers.
+ogType: website
+---
+
+{% block extraCss %}
+<link rel="stylesheet" href="/assets/css/ads.css">
+{% endblock %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.name }}",
+  "url": "{{ site.url }}",
+  "description": "{{ site.tagline }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ site.url }}/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<section class="hero-strip">
+  <div class="container hero-inner">
+    <h1 class="hero-heading">Clear Answers. <em>Instantly.</em></h1>
+    <p class="hero-sub">Find how-to guides and plain-language explanations for everyday questions.</p>
+    <div class="search-wrapper">
+      <input type="search" id="site-search" class="search-input"
+             placeholder="Search for anything... e.g. 'how to renew passport'"
+             aria-label="Search articles">
+      <button class="search-btn" aria-label="Submit search">
+        <i data-lucide="search"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="category-bar" aria-label="Filter by category">
+  <div class="container">
+    <div class="category-pills" role="list">
+      <button class="category-pill active" data-category="all" role="listitem">All</button>
+      <button class="category-pill" data-category="how-to" role="listitem">How To</button>
+      <button class="category-pill" data-category="what-is" role="listitem">What Is</button>
+      <button class="category-pill" data-category="technology" role="listitem">Technology</button>
+      <button class="category-pill" data-category="money-finance" role="listitem">Money</button>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  {% set type = "leaderboard" %}
+  {% include "ad-units.njk" %}
+</div>
+
+<section class="posts-section">
+  <div class="container">
+    <div class="posts-grid" id="posts-grid">
+      {% for post in collections.posts %}
+        {% if loop.index <= site.postsPerPage %}
+        <a href="{{ post.url }}" class="post-card" data-category="{{ post.data.category | slug }}">
+          <span class="post-card-category">{{ post.data.category }}</span>
+          <h2 class="post-card-title">{{ post.data.title }}</h2>
+          <p class="post-card-excerpt">{{ post.data.description | truncate(100) }}</p>
+          <div class="post-card-meta">
+            <time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
+            <span>·</span>
+            <span>{{ post.data.readingTime }}</span>
+          </div>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    
+    {% if collections.posts.length > site.postsPerPage %}
+    <div class="pagination">
+      <button id="load-more" class="btn-load-more">Load More Articles</button>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}
