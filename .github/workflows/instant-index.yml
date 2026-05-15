@@ -1,0 +1,57 @@
+name: Push to Google Indexing API
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/posts/*.md' # Only runs when you add/edit a blog post
+
+jobs:
+  index-urls:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2 # Needed to compare changes between commits
+
+      - name: Ping Google Indexing API
+        run: |
+          # 1. Find newly added or modified Markdown files
+          CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep '^src/posts/.*\.md$' || true)
+          
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No new posts detected in this commit. Skipping."
+            exit 0
+          fi
+
+          echo "Found modified posts: $CHANGED_FILES"
+
+          # 2. Generate a fresh Access Token using the Refresh Token
+          ACCESS_TOKEN=$(curl -s -X POST https://oauth2.googleapis.com/token \
+            -d client_id=${{ secrets.GOOGLE_CLIENT_ID }} \
+            -d client_secret=${{ secrets.GOOGLE_CLIENT_SECRET }} \
+            -d refresh_token=${{ secrets.GOOGLE_REFRESH_TOKEN }} \
+            -d grant_type=refresh_token | jq -r '.access_token')
+
+          # 3. Loop through files, create URLs, and ping Google
+          for FILE in $CHANGED_FILES; do
+            # Extract the filename without the .md extension (the slug)
+            SLUG=$(basename "$FILE" .md)
+            
+            # Construct your live Vercel URL
+            NEW_URL="https://clarifypost.vercel.app/posts/$SLUG"
+            
+            echo "Requesting Instant Indexing for: $NEW_URL"
+
+            # Ping the Indexing API
+            RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" -X POST https://indexing.googleapis.com/v3/urlNotifications:publish \
+              -H "Authorization: Bearer $ACCESS_TOKEN" \
+              -H "Content-Type: application/json" \
+              -d "{
+                \"url\": \"$NEW_URL\",
+                \"type\": \"URL_UPDATED\"
+              }")
+              
+            echo "Google API Response Code: $RESPONSE (200 = Success)"
+          done
