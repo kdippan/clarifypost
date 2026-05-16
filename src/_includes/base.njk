@@ -57,6 +57,30 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
   <script src="/assets/js/main.js" defer></script>
   {% block extraJs %}{% endblock %}
-
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#dcc4af", /* Dark navy background */
+      "text": "#000* Light gray text */
+    },
+    "button": {
+      "background": "#d4500a", /* Cyan/Teal button matching your brand */
+      "text": "#ffffff"
+    }
+  },
+  "theme": "edgeless",
+  "position": "bottom-right",
+  "content": {
+    "message": "We use cookies (like Google Analytics) to understand our traffic and serve relevant ads. By continuing to use ClarifyPost, you consent to our use of cookies.",
+    "dismiss": "Got it!",
+    "link": "Learn more",
+    "href": "/privacy/" /* Links to your privacy policy */
+  }
+})});
+</script>
 </body>
 </html>
