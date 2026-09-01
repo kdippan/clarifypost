@@ -1,8 +1,9 @@
 {
   "name": "ClarifyPost",
+  "alternateName": "Clarify Post",
   "tagline": "Clear Answers. Instantly.",
   "url": "https://clarifypost.dippan.com.np/",
-  "author": "ClarifyPost",
+  "author": "Dippan Bhusal",
   "ga4Id": "G-SGZ1HGWYT8",
   "adsenseClient": "ca-pub-3159539127750553",
   "postsPerPage":  100,

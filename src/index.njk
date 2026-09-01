@@ -10,22 +10,33 @@ ogType: website
 {% endblock %}
 
 {% block schema %}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "{{ site.name }}",
+  "@id": "{{ site.url }}#website",
+  "name": "ClarifyPost",
+  "alternateName": "Clarify Post",
   "url": "{{ site.url }}",
   "description": "{{ site.tagline }}",
+  "publisher": {
+    "@type": "Person",
+    "@id": "{{ site.url }}#author",
+    "name": "{{ site.author }}"
+  },
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "{{ site.url }}/search?q={search_term_string}",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ site.url }}/search/?q={search_term_string}"
+    },
     "query-input": "required name=search_term_string"
   }
 }
 </script>
-{% endblock %}
 
+{% endblock %}
 {% block content %}
 <section class="hero-strip">
   <div class="container hero-inner" style="padding: 48px 0; text-align: center;">
