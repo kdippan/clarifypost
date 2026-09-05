@@ -18,6 +18,12 @@ imageAlt: "Destruction caused by the 2026 Bhote Koshi flood in Nepal"
   <p>The <strong>2026 Nepal flood disaster</strong> began on <strong>August 26, 2026</strong>, when a catastrophic surge entered the <strong>Bhote Koshi River</strong> system near the Nepal–China border. The event caused flash flooding, landslides and massive debris flows across downstream communities, destroying homes, roads, bridges and hydropower infrastructure.</p>
 </div>
 
+## Key Takeaways
+
+- The disaster began with a rapid high-altitude ice-and-rock event that sent water and debris into the Bhote Koshi system.
+- Flooding and landslides damaged communities, transport links and hydropower infrastructure across several downstream districts.
+- Casualty and impact figures remain provisional while rescue, recovery and verification work continues.
+
 <figure class="article-image">
   <img
     src="/assets/img/nepal_flood.jpg"

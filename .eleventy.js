@@ -25,6 +25,27 @@ module.exports = function(eleventyConfig) {
     return str;
   });
 
+  eleventyConfig.addFilter("relatedPosts", (posts, category, currentUrl, limit = 5) => {
+    const categoryPosts = posts.filter(post => post.data.category === category);
+    const relatedPool = categoryPosts.length > 1 ? categoryPosts : posts;
+    const currentIndex = relatedPool.findIndex(post => post.url === currentUrl);
+
+    if (currentIndex === -1) {
+      return relatedPool.slice(0, limit);
+    }
+
+    const relatedPosts = [];
+    for (let offset = 1; relatedPosts.length < limit && offset < relatedPool.length; offset++) {
+      const previousPost = relatedPool[currentIndex - offset];
+      const nextPost = relatedPool[currentIndex + offset];
+
+      if (previousPost) relatedPosts.push(previousPost);
+      if (nextPost && relatedPosts.length < limit) relatedPosts.push(nextPost);
+    }
+
+    return relatedPosts;
+  });
+
   eleventyConfig.addCollection("posts", function(collectionApi) {
     return collectionApi.getFilteredByGlob("src/posts/*.md").sort((a, b) => b.date - a.date);
   });

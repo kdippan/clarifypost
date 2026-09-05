@@ -571,16 +571,16 @@ A: Janmashtami is the Hindu festival celebrating Krishna's birth and is observed
 
 ## Sources and Further Reading
 
-<a href="https://en.wikipedia.org/wiki/Krishna" target="_blank" rel="nofollow noopener noreferrer">Krishna — Wikipedia</a>
+<a href="https://en.wikipedia.org/wiki/Krishna" target="_blank" rel="noopener noreferrer">Krishna — Wikipedia</a>
 
-<a href="https://en.wikipedia.org/wiki/Krishna_in_the_Mahabharata" target="_blank" rel="nofollow noopener noreferrer">Krishna in the Mahabharata — Wikipedia</a>
+<a href="https://en.wikipedia.org/wiki/Krishna_in_the_Mahabharata" target="_blank" rel="noopener noreferrer">Krishna in the Mahabharata — Wikipedia</a>
 
-<a href="https://en.wikipedia.org/wiki/Bhagavad_Gita" target="_blank" rel="nofollow noopener noreferrer">Bhagavad Gita — Wikipedia</a>
+<a href="https://en.wikipedia.org/wiki/Bhagavad_Gita" target="_blank" rel="noopener noreferrer">Bhagavad Gita — Wikipedia</a>
 
-<a href="https://www.britannica.com/topic/Krishna-Hindu-deity" target="_blank" rel="nofollow noopener noreferrer">Krishna — Encyclopaedia Britannica</a>
+<a href="https://www.britannica.com/topic/Krishna-Hindu-deity" target="_blank" rel="noopener noreferrer">Krishna — Encyclopaedia Britannica</a>
 
-<a href="https://academic.oup.com/reference/62357/reference-article/571502958" target="_blank" rel="nofollow noopener noreferrer">Krishna — Oxford Bibliographies in Hinduism</a>
+<a href="https://academic.oup.com/reference/62357/reference-article/571502958" target="_blank" rel="noopener noreferrer">Krishna — Oxford Bibliographies in Hinduism</a>
 
-<a href="https://ignca.gov.in/Asi_data/4821.pdf" target="_blank" rel="nofollow noopener noreferrer">Historicity of Kṛṣṇa — Indira Gandhi National Centre for the Arts</a>
+<a href="https://ignca.gov.in/" target="_blank" rel="noopener noreferrer">Historicity of Kṛṣṇa — Indira Gandhi National Centre for the Arts</a>
 
-<a href="https://en.wikipedia.org/wiki/Krishna_Janmashtami" target="_blank" rel="nofollow noopener noreferrer">Krishna Janmashtami — Wikipedia</a>
+<a href="https://en.wikipedia.org/wiki/Krishna_Janmashtami" target="_blank" rel="noopener noreferrer">Krishna Janmashtami — Wikipedia</a>

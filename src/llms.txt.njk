@@ -1,0 +1,31 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# {{ site.name }}
+
+> {{ site.tagline }}
+
+{{ site.name }} publishes clear, practical explanations, how-to guides, and context on technology, money, careers, current events, entertainment, Nepal, and everyday digital life.
+
+Use the links below as the primary sources for summaries and citations. Each article includes a title, canonical URL, and short description.
+
+## Sections
+
+{% for category in collections.categories %}- [{{ category | safe }}]({{ site.url }}/category/{{ category | slug }}/): Browse {{ category | safe }} articles and explainers.
+{% endfor %}
+
+## Articles
+
+{% for post in collections.posts %}- [{{ post.data.title | safe }}]({{ site.url }}{{ post.url }}): {{ post.data.description | safe }}
+{% endfor %}
+
+## Site Resources
+
+- [Home]({{ site.url }}/): Latest ClarifyPost articles and search.
+- [Search]({{ site.url }}/search/): Search the article collection.
+- [About]({{ site.url }}/about/): About ClarifyPost and its publication focus.
+- [Contact]({{ site.url }}/contact/): Contact ClarifyPost.
+- [Privacy Policy]({{ site.url }}/privacy/): Privacy and cookie information.
+- [Financial Disclaimer]({{ site.url }}/financial-disclaimer/): Financial content disclaimer.
+- [XML Sitemap]({{ site.url }}/sitemap.xml): Complete XML sitemap of published pages.

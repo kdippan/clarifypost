@@ -29,9 +29,15 @@ imageAlt: "Gloria Steinem at a Women's Action Alliance news conference in 1972"
     decoding="async"
   >
   <figcaption>
-    <a href="/assets/img/Gloria Steinem.png" target="_blank" rel="nofollow noopener noreferrer"> Gloria Steinem </a>.
+    Gloria Steinem.
   </figcaption>
 </figure>
+
+## Key Takeaways
+
+- Gloria Steinem combined journalism, organizing and political advocacy to expand the modern U.S. women's movement.
+- Her work helped place reproductive rights, workplace equality and gender-based violence at the center of public debate.
+- Her legacy includes major institutional achievements as well as controversies that remain part of her historical record.
 
 Gloria Steinem became famous at a time when women in the United States were challenging legal, economic, cultural, and political structures that had restricted their choices for generations. Her importance was not limited to one law or one organization. She helped create a broader infrastructure for the modern women's movement: magazines, political networks, advocacy organizations, grassroots campaigns, public demonstrations, and media strategies.
 
@@ -101,7 +107,7 @@ The magazine first appeared as an insert in <em>New York</em> magazine in 1971 a
   >
   <figcaption>
     The first issue of <em>Ms.</em> magazine, released in 1972.
-    <a href="https://commons.wikimedia.org/wiki/File:Ms._magazine_Cover_-_Spring_1972.jpg" target="_blank" rel="nofollow noopener noreferrer">Image source: Wikimedia Commons</a>.
+    Image source: Wikimedia Commons.
   </figcaption>
 </figure>
 
@@ -255,7 +261,7 @@ In 2017, she served as an honorary co-chair and speaker at the <strong>Women's M
   >
   <figcaption>
     Gloria Steinem speaking at a women's rights event in 2016.
-    <a href="https://commons.wikimedia.org/wiki/File:Gloria_Steinem_by_Gage_Skidmore.jpg" target="_blank" rel="nofollow noopener noreferrer">Image source: Wikimedia Commons</a>.
+    Image source: Wikimedia Commons.
   </figcaption>
 </figure>
 
@@ -399,7 +405,7 @@ The Presidential Medal of Freedom was especially significant because it is the U
   >
   <figcaption>
     Gloria Steinem on the cover of <em>Ms.</em> magazine in 2002.
-    <a href="https://commons.wikimedia.org/wiki/File:Ms._magazine_Cover_-_Spring_2002.jpg" target="_blank" rel="nofollow noopener noreferrer">Image source: Wikimedia Commons</a>.
+    Image source: Wikimedia Commons.
   </figcaption>
 </figure>
 
@@ -510,12 +516,12 @@ A: There is no single universally accepted answer, but her most lasting achievem
 
 ## Sources and Further Reading
 
-<a href="https://en.wikipedia.org/wiki/Gloria_Steinem" target="_blank" rel="nofollow noopener noreferrer">Gloria Steinem — Wikipedia</a>
+<a href="https://en.wikipedia.org/wiki/Gloria_Steinem" target="_blank" rel="noopener noreferrer">Gloria Steinem — Wikipedia</a>
 
-<a href="https://www.gloriasteinem.com/about" target="_blank" rel="nofollow noopener noreferrer">Official Gloria Steinem Biography</a>
+<a href="https://www.gloriasteinem.com/about" target="_blank" rel="noopener noreferrer">Official Gloria Steinem Biography</a>
 
-<a href="https://www.womenshistory.org/education-resources/biographies/gloria-steinem" target="_blank" rel="nofollow noopener noreferrer">National Women's History Museum — Gloria Steinem</a>
+<a href="https://www.womenshistory.org/education-resources/biographies/gloria-steinem" target="_blank" rel="noopener noreferrer">National Women's History Museum — Gloria Steinem</a>
 
-<a href="https://www.reuters.com/world/feminist-activist-gloria-steinem-dies-age-92-2026-09-03/" target="_blank" rel="nofollow noopener noreferrer">Reuters — Gloria Steinem Dies at 92</a>
+<a href="https://www.reuters.com/world/feminist-activist-gloria-steinem-dies-age-92-2026-09-03/" target="_blank" rel="noopener noreferrer">Reuters — Gloria Steinem Dies at 92</a>
 
-<a href="https://apnews.com/article/724836935f6547fda60f361c15238d14" target="_blank" rel="nofollow noopener noreferrer">Associated Press — Gloria Steinem Dies at 92</a>
+<a href="https://apnews.com/article/724836935f6547fda60f361c15238d14" target="_blank" rel="noopener noreferrer">Associated Press — Gloria Steinem Dies at 92</a>
