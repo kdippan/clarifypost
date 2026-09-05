@@ -14,7 +14,7 @@
   "headline": "{{ title }}",
   "description": "{{ description }}",
   "image": [
-    "{{ site.url }}{% if image %}{% if image[0] == '/' %}{{ image | replace(' ', '%20') }}{% else %}/{{ image | replace(' ', '%20') }}{% endif %}{% else %}{{ site.icon }}{% endif %}"
+    "{{ site.url }}{{ ogImagePath | replace(' ', '%20') }}"
   ],
   "datePublished": "{{ date | isoDate }}",
   "dateModified": "{{ (updated or date) | isoDate }}",
