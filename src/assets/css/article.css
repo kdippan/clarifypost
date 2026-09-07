@@ -212,6 +212,8 @@
 }
 
 .article-header {
+  display: block;
+  width: 100%;
   margin-bottom: var(--space-xl);
 }
 
@@ -273,6 +275,8 @@
 }
 
 .article-body {
+  display: block;
+  width: 100%;
   max-width: var(--article-max-width);
   min-width: 0;
   overflow-wrap: anywhere;
@@ -295,15 +299,19 @@
 }
 
 .article-image {
+  display: block;
   width: 100%;
+  max-width: var(--article-max-width);
+  clear: both;
   margin: var(--space-xl) 0;
 }
 
 .article-image img {
+  display: block;
   width: 100%;
   max-width: 100%;
   height: auto;
-  max-height: 75vh;
+  max-height: min(75vh, 620px);
   object-fit: contain;
   border-radius: var(--radius-md);
 }
