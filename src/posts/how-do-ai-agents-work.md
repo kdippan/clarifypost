@@ -48,7 +48,7 @@ imageAlt: "How AI agents work with tools, memory, planning and actions"
 </div>
 <figure class="article-image">
   <img
-    src="/assets/img/what are AI Agents.png"
+    src="/assets/img/ai-agents/how do ai agents work.png"
     alt="Shakey the Robot, an early autonomous mobile robot developed at SRI"
     title="Shakey the Robot, 1969"
     loading="lazy"
