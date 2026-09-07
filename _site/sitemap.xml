@@ -7,6 +7,92 @@
   </url>
   
   <url>
+    <loc>https://clarifypost.dippan.com.np/category/career/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://clarifypost.dippan.com.np/category/economy/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://clarifypost.dippan.com.np/category/entertainment/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://clarifypost.dippan.com.np/category/money/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://clarifypost.dippan.com.np/category/nepal/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://clarifypost.dippan.com.np/category/news/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://clarifypost.dippan.com.np/category/people/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://clarifypost.dippan.com.np/category/religion-and-culture/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://clarifypost.dippan.com.np/category/technology/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://clarifypost.dippan.com.np/category/world-news/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  <url>
+    <loc>https://clarifypost.dippan.com.np/about/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  
+  <url>
+    <loc>https://clarifypost.dippan.com.np/contact/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  
+  <url>
+    <loc>https://clarifypost.dippan.com.np/privacy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  
+  <url>
+    <loc>https://clarifypost.dippan.com.np/financial-disclaimer/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  
+  
+  <url>
     <loc>https://clarifypost.dippan.com.np/posts/how-do-ai-agents-work/</loc>
     <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>

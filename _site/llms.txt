@@ -108,3 +108,4 @@ Use the links below as the primary sources for summaries and citations. Each art
 - [Privacy Policy](https://clarifypost.dippan.com.np/privacy/): Privacy and cookie information.
 - [Financial Disclaimer](https://clarifypost.dippan.com.np/financial-disclaimer/): Financial content disclaimer.
 - [XML Sitemap](https://clarifypost.dippan.com.np/sitemap.xml): Complete XML sitemap of published pages.
+- [RSS Feed](https://clarifypost.dippan.com.np/feed.xml): Chronological feed of published articles.

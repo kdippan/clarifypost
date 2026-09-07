@@ -119,52 +119,12 @@ The official promotional material also confirms the September 25 theatrical rele
 # Watch The Vvaan Official Teaser
 
 <div class="video-wrapper">
-  <div class="video-container" style="position:relative; width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:16px; background:#f0ede6;">
-    <iframe
-      id="vvaan-trailer"
-      title="The Vvaan: Force of the Forrest Official Teaser"
-      data-src="https://www.youtube.com/embed/cVST-605PfY?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1"
-      width="100%"
-      height="100%"
-      frameborder="0"
-      loading="lazy"
-      allow="autoplay; encrypted-media; picture-in-picture"
-      allowfullscreen
-      style="position:absolute; inset:0; width:100%; height:100%; border:0;"
-    ></iframe>
+  <div class="video-preview" data-youtube-id="cVST-605PfY" data-youtube-title="The Vvaan: Force of the Forrest Official Teaser" tabindex="0" role="button" aria-label="Play The Vvaan official teaser">
+    <img src="https://i.ytimg.com/vi/cVST-605PfY/maxresdefault.jpg" alt="The Vvaan: Force of the Forrest official teaser thumbnail" loading="lazy" decoding="async">
   </div>
 </div>
 
 <p class="media-caption">The official teaser for <strong>The Vvaan: Force of the Forrest</strong>. The preview is loaded when this section enters the viewer's screen and starts muted where browser autoplay policies permit.</p>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const iframe = document.getElementById("vvaan-trailer");
-
-  if (!iframe || !("IntersectionObserver" in window)) {
-    if (iframe && iframe.dataset.src) {
-      iframe.src = iframe.dataset.src;
-    }
-    return;
-  }
-
-  const observer = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          iframe.src = iframe.dataset.src;
-          obs.unobserve(iframe);
-        }
-      });
-    },
-    {
-      threshold: 0.35
-    }
-  );
-
-  observer.observe(iframe);
-});
-</script>
 
 <p><a href="https://www.youtube.com/watch?v=cVST-605PfY" target="_blank" rel="nofollow noopener noreferrer">Watch the teaser directly on YouTube →</a></p>
 

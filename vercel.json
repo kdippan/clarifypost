@@ -3,7 +3,7 @@
   "outputDirectory": "_site",
   "framework": null,
   "rewrites": [
-    { "source": "/sitemap.xml", "destination": "/sitemap/index.html" }
+    { "source": "/favicon.ico", "destination": "/favicon.svg" }
   ],
   "headers": [
     {

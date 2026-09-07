@@ -26,3 +26,4 @@ User-agent: Googlebot-Extended
 Allow: /
 
 Sitemap: https://clarifypost.dippan.com.np/sitemap.xml
+Feed: https://clarifypost.dippan.com.np/feed.xml

@@ -34,6 +34,7 @@ The project is built using **Eleventy (11ty)** for maximum speed and simplicity.
 The platform also integrates:
 
 - ⚡ Instant Google Indexing
+- 🔎 Automatic Bing IndexNow submissions
 - 📊 Google Analytics 4
 - 🚀 Automated Vercel Deployments
 - 🧩 Clean Nunjucks Templating
@@ -52,7 +53,7 @@ The platform also integrates:
 | Deployment | Vercel |
 | Analytics | Google Analytics 4 |
 | Automation | GitHub Actions |
-| SEO | Google Indexing API |
+| SEO | Google Indexing API + Bing IndexNow |
 | Styling | CSS |
 | Hosting | Vercel Edge Network |
 
@@ -132,6 +133,12 @@ A custom GitHub Action automatically:
 4. Forces rapid Google crawling
 
 This helps reduce indexing delays compared to waiting for sitemap discovery.
+
+## 🔎 Bing IndexNow
+
+Every successful production build submits the generated sitemap URLs to Bing's IndexNow API through the `postbuild` script. The public verification key is generated at the site root as `clarifypost-indexnow-2026.txt`, as required by IndexNow.
+
+The default production site URL is configured in `scripts/indexnow.js`. Override it with `INDEXNOW_SITE_URL` when building a different deployment target. Submissions run automatically on Vercel; use `INDEXNOW_FORCE=true` for an explicit local test. The submission is non-blocking, so a temporary IndexNow outage will not fail the site build.
 
 ---
 

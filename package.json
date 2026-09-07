@@ -4,7 +4,8 @@
   "description": "Clear Answers. Instantly. - A static blog.",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy && node scripts/minify-assets.js"
+    "build": "eleventy && node scripts/minify-assets.js",
+    "postbuild": "node scripts/indexnow.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",

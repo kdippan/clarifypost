@@ -1,4 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
+  if (window.hljs) {
+    document.querySelectorAll('.article-body pre code[class*="language-"]:not(.language-text)').forEach(block => {
+      window.hljs.highlightElement(block);
+    });
+  }
+
+  document.querySelectorAll('.share-copy').forEach(button => {
+    button.addEventListener('click', async () => {
+      const url = button.dataset.copyUrl;
+
+      try {
+        await navigator.clipboard.writeText(url);
+        const icon = button.querySelector('svg');
+        button.setAttribute('aria-label', 'Article link copied');
+        button.setAttribute('title', 'Article link copied');
+        if (icon) icon.setAttribute('data-lucide', 'check');
+        if (window.lucide) window.lucide.createIcons();
+        setTimeout(() => {
+          button.setAttribute('aria-label', 'Copy article link');
+          button.setAttribute('title', 'Copy article link');
+          if (icon) icon.setAttribute('data-lucide', 'link');
+          if (window.lucide) window.lucide.createIcons();
+        }, 1800);
+      } catch (error) {
+        button.setAttribute('title', 'Copy failed');
+      }
+    });
+  });
+
   const copyButtons = document.querySelectorAll('.code-copy-btn');
   
   copyButtons.forEach(button => {

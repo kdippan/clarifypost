@@ -277,7 +277,7 @@ Code repository
 Business software
 ```
 <br>
-This is why agentic AI is often described as the combination of **reasoning and action**.
+This is why agentic AI is often described as the combination of  reasoning and action.
 
 ## Tool Design Is an Engineering Problem
 

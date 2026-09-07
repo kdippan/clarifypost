@@ -39,8 +39,8 @@ jobs:
             # Extract the filename without the .md extension (the slug)
             SLUG=$(basename "$FILE" .md)
             
-            # Construct your live Vercel URL
-            NEW_URL="https://clarifypost.vercel.app/posts/$SLUG"
+            # Construct the canonical production URL
+            NEW_URL="https://clarifypost.dippan.com.np/posts/$SLUG/"
             
             echo "Requesting Instant Indexing for: $NEW_URL"
 
