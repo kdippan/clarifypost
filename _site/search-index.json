@@ -368,4 +368,9 @@
       "description": "Agentic AI is changing how artificial intelligence interacts with people, software, and the internet. Learn what agentic AI means, how AI agents work, their architecture, real-world examples, benefits, limitations, security risks, and what comes next.",
       "url": "/posts/what-is-agentic-ai/",
       "category": "Technology"
+    },{
+      "title": "How Do AI Agents Work? Tools, Memory, Planning, Actions &amp; Real Examples",
+      "description": "How do AI agents actually work? This in-depth guide explains the architecture behind modern AI agents, including models, tools, memory, planning, actions, feedback loops, orchestration, real-world examples, security, and limitations.",
+      "url": "/posts/how-do-ai-agents-work/",
+      "category": "Technology"
     }]
