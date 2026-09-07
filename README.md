@@ -28,7 +28,7 @@ ClarifyPost is a fast, static publishing site for clear explainers, how-to guide
 | Styling | CSS with responsive dark-mode support |
 | JavaScript | Small progressive-enhancement scripts |
 | Deployment | Vercel |
-| Analytics | Google Analytics 4 |
+| Analytics | Google Analytics 4 + PostHog |
 | Discovery | Sitemap, RSS, `llms.txt`, `robots.txt`, IndexNow |
 
 ## Features
@@ -42,6 +42,7 @@ ClarifyPost is a fast, static publishing site for clear explainers, how-to guide
 - Click-to-play YouTube previews with lazy iframe loading.
 - Floating social sharing rail on article pages.
 - Global Buy Me a Coffee support widget.
+- PostHog product analytics with page-view capture.
 - RSS feed and AI-readable `llms.txt` resource.
 - Bing IndexNow submission after successful Vercel builds.
 
@@ -76,6 +77,14 @@ npm start
 ```
 
 The development server runs at http://localhost:8080/.
+
+To run the authenticated PostHog Self-driving setup wizard:
+
+```bash
+npm run posthog:self-driving
+```
+
+The wizard may require a PostHog personal API key or account login. The browser analytics client is already integrated through the shared base template.
 
 ## Production build
 

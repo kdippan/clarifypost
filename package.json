@@ -5,7 +5,8 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy && node scripts/minify-assets.js",
-    "postbuild": "node scripts/indexnow.js"
+    "postbuild": "node scripts/indexnow.js",
+    "posthog:self-driving": "npx -y @posthog/wizard@latest self-driving"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",

@@ -45,6 +45,16 @@
     gtag('config', 'G-SGZ1HGWYT8');
   </script>
 
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog&&window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+" (people stub)"}}),o="init capture getFeatureFlag getFeatureFlagPayload isFeatureEnabled identify reset opt_out_capturing opt_in_capturing has_opted_in_capturing has_opted_out_capturing get_distinct_id get_session_id".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_qwa86XW73KpapvMB5DMPChqEzUT5Ja574EXEqkgmxVD3', {
+      api_host: 'https://eu.i.posthog.com',
+      defaults: '2026-05-30',
+      person_profiles: 'identified_only'
+    });
+    posthog.capture('page_view', { page: window.location.pathname });
+  </script>
+
   
 </head>
 <body>
@@ -94,6 +104,9 @@
 
     <h2>Google Analytics</h2>
     <p>We use Google Analytics 4 to monitor and analyze web traffic. Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of our Service.</p>
+
+    <h2>PostHog Analytics</h2>
+    <p>We use PostHog to understand how visitors use ClarifyPost, improve the site, and evaluate content and feature performance. PostHog may collect page views, interaction events, device information, and an anonymous or pseudonymous identifier. PostHog is configured with identified-only person profiles, and you may opt out where supported by your browser or applicable privacy controls. Learn more in the <a href="https://posthog.com/privacy" rel="nofollow noopener noreferrer">PostHog Privacy Policy</a>.</p>
 
     <h2>Consent</h2>
     <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
