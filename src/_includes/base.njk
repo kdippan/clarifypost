@@ -50,9 +50,18 @@
     posthog.init('phc_qwa86XW73KpapvMB5DMPChqEzUT5Ja574EXEqkgmxVD3', {
       api_host: 'https://eu.i.posthog.com',
       defaults: '2026-05-30',
-      person_profiles: 'identified_only'
+      person_profiles: 'identified_only',
+      logs: {
+        serviceName: 'clarifypost-web',
+        environment: 'production',
+        serviceVersion: '{{ version | default("1.0.0") }}',
+        flushIntervalMs: 3000,
+        maxBufferSize: 100,
+        maxLogsPerInterval: 1000
+      }
     });
     posthog.capture('page_view', { page: window.location.pathname });
+    posthog.logger.info('ClarifyPost page loaded', { page: window.location.pathname });
   </script>
 
   {% block schema %}{% endblock %}

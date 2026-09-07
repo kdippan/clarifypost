@@ -43,6 +43,7 @@ ClarifyPost is a fast, static publishing site for clear explainers, how-to guide
 - Floating social sharing rail on article pages.
 - Global Buy Me a Coffee support widget.
 - PostHog product analytics with page-view capture.
+- PostHog structured web Logs with `posthog.logger`.
 - RSS feed and AI-readable `llms.txt` resource.
 - Bing IndexNow submission after successful Vercel builds.
 
@@ -85,6 +86,8 @@ npm run posthog:self-driving
 ```
 
 The wizard may require a PostHog personal API key or account login. The browser analytics client is already integrated through the shared base template.
+
+PostHog Logs use the `clarifypost-web` service name and `production` environment. Console autocapture is intentionally disabled; use structured `posthog.logger` calls for application events that should appear in PostHog Logs.
 
 ## Production build
 
