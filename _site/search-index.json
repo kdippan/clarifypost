@@ -373,4 +373,9 @@
       "description": "How do AI agents actually work? This in-depth guide explains the architecture behind modern AI agents, including models, tools, memory, planning, actions, feedback loops, orchestration, real-world examples, security, and limitations.",
       "url": "/posts/how-do-ai-agents-work/",
       "category": "Technology"
+    },{
+      "title": "What Is a Mobile Hotspot? How 4G, 5G, Wi-Fi &amp; Tethering Work",
+      "description": "What is a mobile hotspot? Learn how your phone turns 4G or 5G mobile data into Wi-Fi, how tethering works, how to connect a laptop, hotspot security, data usage, speed, and when to use a mobile hotspot.",
+      "url": "/posts/what-is-a-mobile-hotspot/",
+      "category": "Technology"
     }]
