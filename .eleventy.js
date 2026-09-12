@@ -7,7 +7,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy({ "src/cdn": "cdn" });
   eleventyConfig.addPassthroughCopy({
-    "src/clarifypost-indexnow-2026.txt": "clarifypost-indexnow-2026.txt",
+    "src/8a7f65fda7549557d3346cc879404471a6ac45e317acb9b7d6ddecae416ff5ef.txt": "8a7f65fda7549557d3346cc879404471a6ac45e317acb9b7d6ddecae416ff5ef.txt",
     "src/favicon.svg": "favicon.svg"
   });
 

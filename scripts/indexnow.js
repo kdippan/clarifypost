@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const siteUrl = (process.env.INDEXNOW_SITE_URL || "https://clarifypost.dippan.com.np").replace(/\/$/, "");
-const key = process.env.INDEXNOW_KEY || "clarifypost-indexnow-2026";
+const key = process.env.INDEXNOW_KEY || "8a7f65fda7549557d3346cc879404471a6ac45e317acb9b7d6ddecae416ff5ef";
 const sitemapPath = path.join(__dirname, "..", "_site", "sitemap.xml");
 const endpoint = "https://api.indexnow.org/indexnow";
 
