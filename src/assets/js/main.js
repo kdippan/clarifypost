@@ -76,16 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
       closeModal();
     }
 
-    const videoPreview = event.target.closest('[data-youtube-id]');
-    if (videoPreview && !videoPreview.querySelector('iframe')) {
-      const iframe = document.createElement('iframe');
-      iframe.src = `https://www.youtube.com/embed/${videoPreview.dataset.youtubeId}?autoplay=1&playsinline=1&rel=0&modestbranding=1`;
-      iframe.title = videoPreview.dataset.youtubeTitle || 'YouTube video player';
-      iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
-      iframe.allowFullscreen = true;
-      videoPreview.replaceChildren(iframe);
-      videoPreview.classList.add('video-playing');
-    }
   });
 
   document.addEventListener('keydown', event => {
@@ -97,12 +87,57 @@ document.addEventListener('DOMContentLoaded', () => {
       openImage(image);
     }
 
-    const videoPreview = event.target.closest('[data-youtube-id]');
-    if (videoPreview && (event.key === 'Enter' || event.key === ' ')) {
+    if (event.target.closest('[data-youtube-id]') && (event.key === 'Enter' || event.key === ' ')) {
       event.preventDefault();
-      videoPreview.click();
+      event.target.closest('[data-youtube-id]').click();
     }
   });
 
   imageModal.querySelector('.image-modal-close').addEventListener('click', closeModal);
+
+  const videoModal = document.createElement('div');
+  videoModal.className = 'video-modal';
+  videoModal.setAttribute('role', 'dialog');
+  videoModal.setAttribute('aria-modal', 'true');
+  videoModal.setAttribute('aria-label', 'Video player');
+  videoModal.innerHTML = `
+    <div class="video-modal-content">
+      <button class="video-modal-close" type="button" aria-label="Close video">&times;</button>
+      <iframe title="" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  `;
+  document.body.appendChild(videoModal);
+
+  const videoFrame = videoModal.querySelector('iframe');
+  const closeVideo = () => {
+    videoModal.classList.remove('open');
+    videoFrame.src = '';
+    document.body.classList.remove('modal-open');
+  };
+
+  const openVideo = preview => {
+    const origin = window.location.origin.startsWith('http') ? window.location.origin : 'https://clarifypost.dippan.com.np';
+    videoFrame.src = `https://www.youtube-nocookie.com/embed/${preview.dataset.youtubeId}?autoplay=1&playsinline=1&rel=0&modestbranding=1&origin=${encodeURIComponent(origin)}`;
+    videoFrame.title = preview.dataset.youtubeTitle || 'YouTube video player';
+    videoModal.classList.add('open');
+    document.body.classList.add('modal-open');
+  };
+
+  document.addEventListener('click', event => {
+    const videoPreview = event.target.closest('[data-youtube-id]');
+    if (videoPreview) {
+      event.preventDefault();
+      openVideo(videoPreview);
+    }
+
+    if (event.target === videoModal || event.target.closest('.video-modal-close')) {
+      closeVideo();
+    }
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && videoModal.classList.contains('open')) closeVideo();
+  });
+
+  videoModal.querySelector('.video-modal-close').addEventListener('click', closeVideo);
 });

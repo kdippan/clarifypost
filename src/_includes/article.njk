@@ -15,6 +15,10 @@
   "@id": {{ (site.url + page.url + '#article') | json | safe }},
   "headline": {{ title | json | safe }},
   "description": {{ description | json | safe }},
+  "keywords": {{ (keywords or tags) | json | safe }},
+  "articleSection": {{ category | json | safe }},
+  "inLanguage": "en-US",
+  "isAccessibleForFree": true,
   "image": [
     {{ (site.url + (ogImagePath | replace(' ', '%20'))) | json | safe }}
   ],

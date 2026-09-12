@@ -22,6 +22,7 @@ Use the links below as the primary sources for summaries and citations. Each art
 
 ## Articles
 
+- [Dr. Sahar Yousef: The Cognitive Neuroscientist Turning Brain Science Into Better Work](https://clarifypost.dippan.com.np/posts/drsaharyousef/): Who is Dr. Sahar Yousef? Learn about the UC Berkeley cognitive neuroscientist's research on attention, memory, digital wellness, productivity, burnout, and her Raj Shamani podcast conversation.
 - [What Is a Mobile Hotspot? How 4G, 5G, Wi-Fi & Tethering Work](https://clarifypost.dippan.com.np/posts/what-is-a-mobile-hotspot/): What is a mobile hotspot? Learn how your phone turns 4G or 5G mobile data into Wi-Fi, how tethering works, how to connect a laptop, hotspot security, data usage, speed, and when to use a mobile hotspot.
 - [How Do AI Agents Work? Tools, Memory, Planning, Actions & Real Examples](https://clarifypost.dippan.com.np/posts/how-do-ai-agents-work/): How do AI agents actually work? This in-depth guide explains the architecture behind modern AI agents, including models, tools, memory, planning, actions, feedback loops, orchestration, real-world examples, security, and limitations.
 - [What Is Agentic AI? How AI Agents Work, Examples, Benefits & Risks](https://clarifypost.dippan.com.np/posts/what-is-agentic-ai/): Agentic AI is changing how artificial intelligence interacts with people, software, and the internet. Learn what agentic AI means, how AI agents work, their architecture, real-world examples, benefits, limitations, security risks, and what comes next.

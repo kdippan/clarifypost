@@ -5,6 +5,7 @@ module.exports = function(eleventyConfig) {
   const postIndex = [];
 
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy({ "src/cdn": "cdn" });
   eleventyConfig.addPassthroughCopy({
     "src/clarifypost-indexnow-2026.txt": "clarifypost-indexnow-2026.txt",
     "src/favicon.svg": "favicon.svg"
